@@ -16,9 +16,7 @@ if(empty($errors)){
             session_regenerate_id();
             $_SESSION['login'] = true;
             $_SESSION['id'] = $res['id'];
-            $_SESSION['last_login'] = time();
 
-            // redirect the user to members area/dashboard page
             header("location: index.php");
         }
         else {

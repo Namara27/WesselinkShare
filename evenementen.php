@@ -1,4 +1,6 @@
 <?php
+require_once('DBconnection.php');
+
 session_start();
 if (!isset($_SESSION['login'])) {
     header('location: login.html');
@@ -12,7 +14,7 @@ if (!isset($_SESSION['login'])) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Evenementen</title>
 </head>
 <body>
 <div id="wrapper">
@@ -27,8 +29,24 @@ if (!isset($_SESSION['login'])) {
             </ul>
         </nav>
     </header>
-    <div id="picHolder">
-        <img src="img/evenement.jpg" alt="evenement">
+    <div id="overzichtEvenementen">
+        <h3>Evenementen</h3>
+        <?php
+        //Display the data in a table
+        $sql = $conn->query("SELECT datum, naam, locatie FROM evenementen");
+
+        print "<table class ='zenderoverzicht'>";
+        print "<tr><th>Datum</th><th>Naam</th><th>Locatie</th><th>Verwijder</th></tr>";
+        foreach ($sql as $row) {
+            print "<tr>";
+            print "<td>" . $row['datum'] . "</td>";
+            print "<td>" . $row['naam'] . "</td>";
+            print "<td>" . $row['locatie'] . "</td>";
+            print "<td>" . '<a href="eventDelete.php" class="eventDelete">Verwijder</a>' . "</td>";
+            print "</tr>";
+        }
+        print "</table>";
+        ?>
     </div>
     <footer>
         <p>&copy; 2019</p>
