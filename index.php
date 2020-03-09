@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header('location: login.html');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +19,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="zender.php">Accounts</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="">Accounts</a></li>
                 <li><a href="">Evenementen</a></li>
                 <li><a href="">Contact</a></li>
+                <li><a href="logout.php">Uitloggen</a></li>
             </ul>
         </nav>
     </header>
