@@ -1,0 +1,107 @@
+* {
+    font-family: 'Robonto', sans-serif;
+    background-color: lightblue;
+}
+
+body {
+    width: auto;
+}
+
+nav {
+    margin-bottom: 10px;
+    padding: 1px;
+}
+
+li {
+    display: inline-block;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+#wrapper {
+    text-align: center;
+    width: 1100px;
+    margin: auto;
+}
+
+#picHolder {
+    /*background-color: green;*/
+    height: 350px;
+}
+
+#zenderToevoegen {
+    /*background-color: yellow;*/
+    width: 1100px;
+    margin: auto;
+}
+
+#zenderLijst {
+    /*background-color: #0000bf;*/
+    width: 1100px;
+    margin: auto;
+}
+
+#wijzigenHolder {
+    /*background-color: green;*/
+    margin: auto;
+    width: 1100px;
+    display: inline-block;
+}
+
+#overzichtHouder {
+    margin-top: 20px;
+}
+
+table.zenderoverzicht {
+    border-collapse: collapse;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+table.zenderoverzicht td, th {
+    border: 1px solid black;
+    padding: 5px 30px;
+}
+
+table.zenderlist {
+    margin: 15px;
+    display: inline-block;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+table.zenderlist td {
+    border-top: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    height: 60px;
+    /*color: red;*/
+}
+
+input[name="omschrijving"], input[name="zender"], input[name="prognaam"],
+input[name="datum"], input[name="begintijd"], input[name="eindtijd"],
+input[name="presentator"], input[name="zendernaam"], input[name="numberID"],
+input[name="progNaamAdd"], input[name="progDateAdd"], input[name="progBeginTijdAdd"],
+input[name="progEindTijdAdd"], input[name="progPresentatorAdd"], input[name="progZendernaamAdd"], input[name="zenderToevoegen"] {
+    width: 250px;
+}
+
+.zenderToevoegen {
+    width: 115px;
+    height: 25px;
+    background: #4d4d4d;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: small;
+    text-decoration: none;
+}
+
+footer {
+    /*background-color: red;*/
+}
