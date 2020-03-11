@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registreren</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="registreren">
+    <h1>Registreer</h1>
+    <form action="registerForm.php" method="post">
+        <label for="regUsername">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="regUsername" placeholder="Username" id="regUsername" required>
+        <label for="regEmail">
+            <i class="fas fa-envelope"></i>
+        </label>
+        <input type="text" name="regEmail" placeholder="Email" id="regEmail" required>
+        <label for="regPassword">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="regPassword" placeholder="Password" id="regPassword" required>
+        <label for="regRepeatPassword">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="regRepeatPassword" placeholder="Repeat password" id="regRepeatPassword" required>
+        <input type="submit" value="Registreer" name="registreren">
+        <a href="login.html" id="goback">Terug naar inlog</a>
+    </form>
+</div>
+</body>
+</html>

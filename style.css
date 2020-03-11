@@ -56,13 +56,13 @@ li a {
     margin-top: 20px;
 }
 
-table.zenderoverzicht {
+table.evenementenoverzicht {
     border-collapse: collapse;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: inline-block;
 }
 
-table.zenderoverzicht td, th {
+table.evenementenoverzicht td, th {
     border: 1px solid black;
     padding: 5px 30px;
 }
@@ -79,27 +79,14 @@ table.zenderlist td {
     padding: 10px;
     width: 200px;
     height: 60px;
-    /*color: red;*/
 }
 
 input[name="omschrijving"], input[name="zender"], input[name="prognaam"],
 input[name="datum"], input[name="begintijd"], input[name="eindtijd"],
 input[name="presentator"], input[name="zendernaam"], input[name="numberID"],
 input[name="progNaamAdd"], input[name="progDateAdd"], input[name="progBeginTijdAdd"],
-input[name="progEindTijdAdd"], input[name="progPresentatorAdd"], input[name="progZendernaamAdd"], input[name="zenderToevoegen"] {
+input[name="progEindTijdAdd"], input[name="progPresentatorAdd"], input[name="progZendernaamAdd"], input[name="deleteItem"] {
     width: 250px;
-}
-
-.zenderToevoegen {
-    width: 115px;
-    height: 25px;
-    background: #4d4d4d;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-size: small;
-    text-decoration: none;
 }
 
 footer {
@@ -112,6 +99,8 @@ footer {
     width: 400px;
     background-color: #ffffff;
     margin: 100px auto;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
 }
 
 .login h1 {
@@ -120,6 +109,8 @@ footer {
     padding: 20px 0 20px 0;
     border-bottom: 1px solid #dee0e4;
     background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .login form {
@@ -128,6 +119,8 @@ footer {
     justify-content: center;
     padding-top: 20px;
     background-color: white;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 .login form label {
@@ -149,7 +142,7 @@ footer {
     background-color: white;
 }
 
-.login form input[type="submit"] {
+.login form input[name="login"] {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
@@ -160,10 +153,123 @@ footer {
     color: #ffffff;
 }
 
-.login form input[type="submit"]:hover {
+.login form a#registreren {
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #3274d6;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.login form input[type="submit"]:hover, .login form a#registreren:hover {
     background-color: #2868c7;
 }
 
-.fa-user, .fa-lock {
+.fa-user, .fa-lock, .fa-envelope {
     background-color: #3274d6;
+}
+
+/* ----------------------- register form----------------------- */
+
+.registreren {
+    width: 400px;
+    background-color: #ffffff;
+    margin: 100px auto;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+}
+
+.registreren h1 {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.registreren form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.registreren form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+
+.registreren form input[type="password"], .registreren form input[type="text"] {
+    width: 310px;
+    height: 48px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    background-color: white;
+}
+
+.registreren form input[name="login"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.registreren form input[name="registreren"] {
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #3274d6;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.registreren form a#goback {
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #3274d6;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.registreren form input[type="submit"]:hover, .registreren form a#goback:hover {
+    background-color: #2868c7;
 }
