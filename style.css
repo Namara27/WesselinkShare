@@ -4,7 +4,7 @@
 }
 
 body {
-    width: auto;
+    margin: auto;
 }
 
 nav {
@@ -24,8 +24,9 @@ li a {
 
 #wrapper {
     text-align: center;
-    width: 1100px;
+    width: 700px;
     margin: auto;
+    background-color: red;
 }
 
 #picHolder {

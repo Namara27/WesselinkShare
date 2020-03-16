@@ -1,6 +1,5 @@
 <?php
 require_once('DBconnection.php');
-require_once('eventDelete.php');
 
 if (isset($_POST['deleteItem'])) {
     $id = $_POST['deleteItem'];
@@ -9,5 +8,5 @@ if (isset($_POST['deleteItem'])) {
     $query = $conn->prepare($sql);
     $result = $query->execute(array($id));
 
-    header("location: evenementen.php");
+    header("location: evenementenAdmin.php");
 }
